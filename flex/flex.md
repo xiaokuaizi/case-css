@@ -2,6 +2,7 @@
 任何一个容器（包括行内元素）都可以指定为 Flex 布局
 
 ## 效果demo
+备注：查看在线预览效果请调成手机模式
 
 [在线预览效果](https://xiaokuaizi.github.io/case-css/flex/flex.html)
 
