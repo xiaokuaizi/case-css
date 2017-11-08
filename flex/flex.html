@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{list-style: none;margin:0;padding:0}
+        .tab li{display: inline-block;border:1px solid #ccb3b3; margin-right:5px;height:25px;line-height: 25px;border-radius: 3px;padding:2px;font-size: 10px;margin-top:5px;}
+        .contain{display: flex;height:150px;border:1px solid #ccb3b3;margin: 10px 0;}
+        .contain li{height:20px;width:50px;background: gray;margin:5px;text-align: center;}
+        .speHei .hei100{height:100px;font-size:30px;}
+        .speHei .hei50{height:50px;font-size:10px;width:30%}
+        .speHei .hei80{height:80px;font-size:20px;}
+        .speHei .heiAuto{height: auto;}
+    </style>
+</head>
+<body>
+    <div>
+            <h3>flex-direction</h3>
+            <ul class="tab">
+                <li>row</li>
+                <li>row-reverse</li>
+                <li>column</li>
+                <li>column-reverse</li>
+            </ul>
+            <ul class="contain">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+    </div>
+    <div>
+        <h3>flex-wrap</h3>
+        <ul class="tab">
+            <li>nowrap</li>
+            <li>wrap</li>
+            <li>wrap-reverse</li>
+        </ul>
+        <ul class="contain">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+    <div>
+        <h3>justify-content</h3>
+        <ul class="tab">
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>space-between</li>
+            <li>space-around</li>
+        </ul>
+        <ul class="contain">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div class="speHei">
+        <h3>align-items</h3>
+        <ul class="tab">
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>baseline</li>
+            <li>stretch</li>
+        </ul>
+        <ul class="contain">
+            <li class="hei100">1</li>
+            <li class="hei50">2</li>
+            <li>3</li>
+            <li class="hei80">4</li>
+        </ul>
+    </div>
+    <div class="speHei">
+        <h3>align-content</h3>
+        <ul class="tab">
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>space-between</li>
+            <li>space-around</li>
+            <li>stretch</li>
+        </ul>
+        <ul class="contain" style="flex-wrap: wrap;">
+            <li class="hei50">1</li>
+            <li class="hei50">2</li>
+            <li class="hei50">3</li>
+            <li class="hei50">4</li>
+            <li class="hei50">5</li>
+        </ul>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script>
+        var $tabs = $(".tab");
+        $.each($tabs,function(ind, item){
+            var $lis = $(item).find("li"),
+                $contain = $(item).parent().find(".contain"),
+                $title = $(item).parent().find("h3"),
+                keyVal = $title.text();
+            $lis.click(function(){
+                var className = $(this).text();
+                var $conLis = $contain.find("li");
+                if(className == 'stretch'){
+                   
+                    $conLis.addClass("heiAuto");
+
+                }else{
+                    $conLis.removeClass("heiAuto");
+                }
+                $contain.css(keyVal,className)
+                
+            })
+        })
+       
+    </script>
+</body>
+</html>
