@@ -3,7 +3,9 @@
 
 ## 效果demo
 
-下载flex.html文件，直接打开即可切换tab查看各个属性对应的各个属性值的效果
+[在线预览效果](https://xiaokuaizi.github.io/case-css/flex/flex.html)
+
+[domo源码地址](https://github.com/xiaokuaizi/case-css/blob/master/flex/flex.html)
 
 
 ## 容器属性
