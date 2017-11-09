@@ -30,6 +30,9 @@ height = border + padding + 内容的height。
 IE8及以上版本支持该属性
 
 ### 应用场景：三栏布局
+
+[在线预览效果](https://xiaokuaizi.github.io/case-css/box-sizing/box-sizing.html)
+
 ```
 //html
 <div class="left"></div>
