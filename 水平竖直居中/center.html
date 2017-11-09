@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .contain{border:1px solid #d4c8c8;height:300px;}
+
+        /* 方案1：flex */
+        .contain1{display: flex;justify-content: center;align-items: center;}
+
+        /* 方案2：translate */
+        .contain2{position: relative}
+        .contain2 .con{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%) }
+
+        /* 方案3：vertical-align */
+        .contain3{text-align: center;}
+        .contain3 .con{vertical-align: middle;display: inline-block; }
+        .contain3:after{vertical-align: middle;display: inline-block;content: '';height:100%}
+
+        .contain4 .con{display: table-cell;vertical-align: middle;text-align: center;width:500px;}
+        .contain4 {display: table;}
+    </style>
+</head>
+<body>
+    <p>未知宽高的模块水平垂直居中</p>
+    <h3>方案1：flex</h3>
+    <div class="contain contain1">
+        <img class="con" src="https://f10.baidu.com/it/u=1631323650,1503715769&fm=72" alt="">
+    </div>
+    <div class="contain contain1">
+        <div class="con" style="width:100px;height:100px;background:gray;"></div>
+    </div>
+
+    <h3>方案2：translate</h3>
+    <div class="contain contain2">
+        <img class="con" src="https://f10.baidu.com/it/u=1631323650,1503715769&fm=72" alt="">
+    </div>
+    <div class="contain contain2">
+        <div class="con" style="width:100px;height:100px;background:gray;"></div>
+    </div>
+
+    <h3>方案3：vertical-align</h3>
+    <div class="contain contain3">
+        <img class="con" src="https://f10.baidu.com/it/u=1631323650,1503715769&fm=72" alt="">
+    </div>
+
+    <div class="contain contain3">
+        <div class="con" style="width:100px;height:100px;background:gray;"></div>
+    </div>
+    
+    <!-- <div class="contain contain4" style="width:300px;">
+        <div class="con" style="width:100px;height:100px;background:gray;">效果在这里</div>
+    </div> -->
+    
+</body>
+</html>
