@@ -49,8 +49,8 @@ div.left{
 div.cent{
     width:50%;
     background:green;
-    padding:0 20px;  // padding或border 会使内容溢出
-    box-sizing:border-box; //解决padding或border使内容溢出
+    padding:0 20px;  /*padding或border 会使内容溢出*/
+    box-sizing:border-box; /*解决padding或border使内容溢出*/
 }
 div.right{
     width:25%;

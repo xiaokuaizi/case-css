@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p{margin:0;padding:0;}
+        .contain{
+            width:100%;
+        }
+        .contain:after{
+            content: '';
+            display: block;
+            height:0;
+            clear: both;
+        }
+        .contain div{
+            height:500px;
+            height:100px;
+            float: left;
+        }
+        div.left{
+            width:25%;
+            background:red;
+        }
+        div.center{
+            width:50%;
+            background:green;
+            padding:0 20px;  /*padding或border 会使内容溢出*/
+        }
+        div.right{
+            width:25%;
+            background:blue;
+        }
+
+        .default .center{
+            padding: 0 ;
+        }
+        .default .center p{
+            padding: 0 20px;
+            height: 100px;
+
+        }
+
+        .box-sizing .center{
+            box-sizing:border-box; /*解决padding或border使内容溢出*/
+        }
+
+        .flex{display: flex;}
+        .flex .center{flex:1}
+    </style>
+</head>
+<body>
+    <p>三个item，宽度百分比加起来是100%，如果再设置padding或者border，会宽度溢出</p>
+    <h3>通常三栏布局样式,宽度溢出</h3>
+    <div class="contain">
+        <div class="left item"></div>
+        <div class="center item"></div>
+        <div class="right item"></div>
+    </div>
+    <h3>方法1：嵌套标签</h3>
+    <div class="contain default">
+        <div class="left item"></div>
+        <div class="center item">
+            <p></p>
+        </div>
+        <div class="right item"></div>
+    </div>
+    <h3>方法2：box-sizing</h3>
+    <div class="contain box-sizing">
+        <div class="left item"></div>
+        <div class="center item"></div>
+        <div class="right item"></div>
+    </div>
+    <h3>方法3：flex</h3>
+    <div class="contain flex">
+        <div class="left item"></div>
+        <div class="center item"></div>
+        <div class="right item"></div>
+    </div>
+</body>
+</html>
