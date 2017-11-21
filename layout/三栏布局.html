@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .outer{overflow: hidden}
+        .outer .center{background: blue;margin-left:100px;margin-right: 100px;}
+        .outer .left{float:left;width:100px;background: red;}
+        .outer .right{float:right;width:100px;background: green;}
+
+        .outer1{padding: 0 100px;margin-top:20px;overflow: hidden}
+        .outer1 .center{width:100%;background: blue;}
+        .outer1 .left, .outer1 .center, .outer1 .right{float: left;}
+        .outer1 .left{width:100px;margin-left:-100px;background: red;}
+        .outer1 .right{width:100px;margin-right:-100px;background: green;}
+
+        .outer2{padding: 0 100px;margin-top:20px;overflow: hidden}
+        .outer2 .center{width:100%;background: blue;}
+        .outer2 .left, .outer2 .center, .outer2 .right{float: left;position: relative;}
+        .outer2 .left{width:100px;margin-left:-100px;background: red;margin-left:-100%;left:-100px;}
+        .outer2 .right{width:100px;margin-right:-100px;background: green;margin-left:-100px;right:-100px;}
+
+        .outer3{margin-top:20px;overflow: hidden}
+        .outer3 .center{margin: 0 100px;background: blue;}
+        .outer3 .left, .outer3 .center, .outer3 .right{float: left;}
+        .outer3 .left{width:100px;margin-left:-100%;background: red;}
+        .outer3 .right{width:100px;margin-left:-100px;background: green;}
+
+        .tips{color:#9C9B9B;font-size: 10px;}
+
+        .outer4{display: flex;}
+        .outer4 .left{width:100px;float:left;background: red;}
+        .outer4 .right{width:100px;float:right;background: green;}
+        .outer4 .center{flex:1;background: blue;}
+
+        h3{text-align: center}
+    </style>
+</head>
+<body>
+    <h3>三栏布局</h3>
+    
+    <div class="outer">
+        <div class="left">左边左边左边左边左边左边左边左边左边左边左边左边左边左边左边</div>
+        <div class="right">右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</div>        
+        <div class="center">中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间</div>
+    </div>
+    <p class="tips">左右中，中间内容顶上去</p>
+
+
+    <div class="outer1">
+        <div class="left">左边左边左边左边左边左边左边左边左边左边左边左边左边左边左边</div>
+        <div class="center">中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间</div>
+        <div class="right">右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</div>
+    </div>
+    <p class="tips">左中右，内容100%</p>
+
+    
+    <div class="outer2">
+        <div class="center">中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间</div>
+        <div class="left">左边左边左边左边左边左边左边左边左边左边左边左边左边左边左边</div>
+        <div class="right">右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</div>
+        
+    </div>
+    <p class="tips">中左右，内容100%</p>
+    
+    <div class="outer3">
+            <div class="center">中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间</div>
+            <div class="left">左边左边左边左边左边左边左边左边左边左边左边左边左边左边左边</div>
+            <div class="right">右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</div>
+    </div>
+   <p class="tips">中左右，内容设置padding</p>
+
+    <div class="outer4">
+        <div class="left">左边左边左边左边左边左边左边左边左边左边左边左边左边左边左边</div>
+        <div class="center">中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间</div>
+        <div class="right">右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</div>
+    </div>
+    <p class="tips">利用flex</p>
+</body>
+</html>
