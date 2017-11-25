@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float-position</title>
+    <style>
+        body{padding:10px;margin:0;}
+        .item{display: inline-block;width:100px;height:100px;background: #3B3939;opacity: 0.8;}
+        .item2{position: absolute;background: red;}
+        .item3{background: #561DB3;position: absolute;left:10px}
+        .item4{background: #1DB368;}
+        .item5{background: rgb(28, 85, 160);position: absolute}
+        .item6{float: left;}
+        section{margin:20px 0;}
+        .tips{color:#3B3939;font-size: 9px;}
+    </style>
+</head>
+<body>
+    <section>
+        <h3>position+float</h3>
+        <span class="item item1">内容一:正常</span>
+        <span class="item item2">内容二:绝对定位元素，未设置lelft/top</span>
+        <span class="item item3">内容三:绝对定位元素，设置了lelft/top</span>
+        <span class="item item4">内容四:正常</span>
+        <span class="item item5">内容五：绝对定位元素，未设置lelft/top</span>
+        <span class="item item6">内容六：float</span>
+    </section>
+    <a href="https://github.com/xiaokuaizi/articles-summary/blob/master/A%20little%20bit%20of%20progress%20every%20day/css/float%2Cabsolute%E5%8C%BA%E5%88%AB.md">点击查看float和absolute的区别</a>
+</body>
+</html>
